@@ -1,6 +1,5 @@
 sap.ui.define([
 	"sap/m/Button",
-	"sap/m/ButtonType",
 	"sap/ui/core/Core",
 	"sap/ui/qunit/QUnitUtils",
 	"sap/ui/events/KeyCodes",
@@ -8,7 +7,6 @@ sap.ui.define([
 	"sap/ui/thirdparty/sinon-qunit"
 ], function(
 	Button,
-	ButtonType,
 	Core,
 	QUnitUtils,
 	KeyCodes
@@ -55,7 +53,7 @@ sap.ui.define([
 		var fnCallback = function(oEvent){
 			aCalls.push(oEvent);
 
-			oTestButton.setType(ButtonType.Reject);
+			oTestButton.setType("Reject");
 		};
 		var fnSpy = this.spy(fnCallback);
 
@@ -66,6 +64,6 @@ sap.ui.define([
 		assert.strictEqual(fnSpy.callCount, 1, "spy calls eq 1");
 
 		assert.strictEqual(this.oButton.getText(), "", "New test - with new button");
-		assert.strictEqual(this.oButton.getType(), ButtonType.Reject, "button type is reject");
+		assert.strictEqual(this.oButton.getType(), "Reject", "button type is reject");
 	});	
 });
