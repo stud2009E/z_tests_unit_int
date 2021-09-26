@@ -1,6 +1,6 @@
 sap.ui.define([
 	"sap/ui/test/Opa5",
-	"./arrangement/Arrangement",
+	"z/unit/int/test/integration/arrangement/Arrangement",
 	"./WelcomeTest"
 ], function (
 	Opa5,

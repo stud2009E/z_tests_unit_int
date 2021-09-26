@@ -3,7 +3,7 @@
     xmlns:smt="sap.ui.comp.smarttable"
     xmlns:t="sap.ui.table">
 
-    <smt:SmartTable 
+    <smt:SmartTable id="smartTable"
         enableAutoBinding="true"
         entitySet="TestDataSet"
         requestAtLeastFields="Byte">
